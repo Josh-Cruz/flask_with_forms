@@ -5,7 +5,7 @@ app.secret_key = 'soopersekret'
 @app.route('/')
 def form():
     if request.method == 'POST':
-        return render_template('results.html', session['name'])
+        return render_template('results.html')
     return render_template('index.html')
 
 @app.route('/results', methods=['POST', 'GET'])
