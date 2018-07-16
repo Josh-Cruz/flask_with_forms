@@ -9,6 +9,9 @@
 </head>
 <body>
     <h1>fill out the form</h1>
+     {% with messages = get_flashed_messages() %} {% if messages %} {% for message in messages %}
+    <p>{{message}}</p>
+    {% endfor %} {% endif %} {% endwith %}
     <form action="/results" method="POST">
         <label for="name">Your Name:</label>  <input type="text" name="name" placeholder="Your Full Name">
         <label for="Dojo_Location">Dojo Location:</label>  <select name="Dojo_Location" id="">
@@ -26,6 +29,6 @@
         <label for="comment_box">Comment (Optional)</label><input type="text" name="optional_comment" id="Optional">
         <input type="submit" value="Submit My Answers">                    
     </form>    
-    <h3>{{error_msg}}</h3>
+    
 </body>
 </html>
