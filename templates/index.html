@@ -5,30 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/main.css')}}">
-    <title>SUrvey Says</title>
+    <title>registration</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
+
 </head>
 <body>
-    <h1>fill out the form</h1>
-     {% with messages = get_flashed_messages() %} {% if messages %} {% for message in messages %}
-    <p>{{message}}</p>
-    {% endfor %} {% endif %} {% endwith %}
-    <form action="/results" method="POST">
-        <label for="name">Your Name:</label>  <input type="text" name="name" placeholder="Your Full Name">
-        <label for="Dojo_Location">Dojo Location:</label>  <select name="Dojo_Location" id="">
-                            <option value="SAn Francisco">San Francisco</option>
-                            <option value="Chicago">Chicago</option>
-                            <option value="Seattle">Seattle</option>
-                            <option value="Online Bootcamp">Online Bootcamp</option>
-                        </select>
-        <label for="Favorite lang"> Favorite Language:</label><select name="Favorite_Language" id="">
-                                <option value="JavaScript">JavaScript</option>
-                                <option value="Python">Python</option>
-                                <option value="CSS">CSS</option>
-                                <option value="HTML 5">HTML 5</option>
-                            </select>
-        <label for="comment_box">Comment (Optional)</label><input type="text" name="optional_comment" id="Optional">
-        <input type="submit" value="Submit My Answers">                    
-    </form>    
-    
+    <div class="container">
+        <h1>fill out the form</h1>
+        {% with messages = get_flashed_messages() %} {% if messages %} {% for message in messages %}
+        <p>{{message}}</p>
+        {% endfor %} {% endif %} {% endwith %}
+        <form action="/results" method="POST">
+            <label for="email">E-mail address:</label> <input type="email" name="email" placeholder="joe@gmail.com">
+            <label for="first_name">First Name:</label>  <input type="text" name="first_name" placeholder="Your First Name">
+            <label for="last_name">Last Name:</label>  <input type="text" name="last_name" placeholder="Your Last Name">
+            <label for="password">Enter Your Password</label><input type="password" name="password" id="">
+            <label for="confirm_password">Re-Enter Your Password</label><input type="password" name="confirm_password" id="">
+            
+            <input type="submit" value="Submit My Answers">                    
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+        crossorigin="anonymous"></script>
 </body>
 </html>

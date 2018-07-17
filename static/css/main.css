@@ -1,12 +1,10 @@
 body{
-    background-color: burlywood
+    background-color: rgb(25, 132, 253);
 }
+
 form{
-    display: inline-flex;
-    justify-content: center;
-    align-content: flex-start;
-    padding: 10px;
-    background-color:grey;
+    background-color:rgb(175, 185, 189);
+    display: block;
 }
 /* #Optional{
     height:200px;
